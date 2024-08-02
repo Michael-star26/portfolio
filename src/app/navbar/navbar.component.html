@@ -1,0 +1,151 @@
+<mat-drawer-container class="my-container p-1">
+    <mat-drawer #drawer class="my-drawer" mode="over" position="start">
+      <div class="ui secondary vertical pointing menu" style="padding-top: 5%;">
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/" (click)="drawer.toggle();second()">
+            <mat-icon>menu</mat-icon>
+            <span>Home</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/projects" (click)="drawer.toggle();second()">
+            <mat-icon>desktop_mac</mat-icon>
+            <span>Projects</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/testimonials" routerLinkActive="active" (click)="drawer.toggle()">
+            <mat-icon>insert_emoticon</mat-icon>
+            <span>Happy Clients</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/contact" (click)="drawer.toggle();second()">
+            <mat-icon>ring_volume</mat-icon>
+            <span>Contact</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/about" (click)="drawer.toggle();second()">
+            <mat-icon>code</mat-icon>
+            <span>My Tech Stack</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/blog" (click)="drawer.toggle();second()">
+            <mat-icon>language</mat-icon>
+            <span>My blog</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/actuarial" (click)="drawer.toggle();second()">
+            <mat-icon>functions</mat-icon>
+            <span>Life as an Actuary</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/math-tutor" (click)="drawer.toggle();second()">
+            <mat-icon>self_improvement</mat-icon>
+            <span>There's more than coding</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/about" (click)="drawer.toggle();second()">
+            <mat-icon>person_pin</mat-icon>
+            <span>About</span>
+          </button>
+        </a>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div class="my-drawer-content">
+        <button  mat-button (click)="drawer.toggle()">
+            <i class="material-icons">toc</i>
+        </button>
+
+          <div class="p-5">
+            <div class="ui card m-auto ">
+              <p style="justify-content: center;">
+                Explore a world where your fantasies and concepts are brought into existence. 
+              </p>
+            </div>
+          </div>
+          <div class="m-2"></div>
+          <div class="ui card d-flex m-auto" style="padding: 50px;justify-content: center">
+            
+            <p style="justify-content: center;">
+              At Vertex, we blend various technologies to bring you exceptional software solutions. <br>
+              We are committed to creating solutions that lead to success as your loyal partner. 
+            </p>
+          </div>
+      </div>
+      <div class="p-2">       
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <!-- <p>We develop all kinds of websites, including but not limited to Landing Pages, E-commerce Websites, Employee/staff portal, Sacco website, Blogging Websites and Custom made softwares. We combine innovation, knowledge, and state-of-the-art technology to provide exceptional outcomes.Remember your idea can be implemented into a fully functional Website</p> -->
+  
+  
+  <button mat-button [matMenuTriggerFor]="otherOptions">Find out more <span style="color: teal;">Here</span></button>
+  <mat-menu #otherOptions="matMenu">
+
+    <button mat-menu-item [matMenuTriggerFor]="otherCervices">Other Services</button>
+    <button mat-menu-item [matMenuTriggerFor]="funHobbyCareer"  >Learn & have fun</button>
+    
+  </mat-menu>
+  
+  <mat-menu #funHobbyCareer="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="dataSci">Data Science</button>
+    <button mat-menu-item [matMenuTriggerFor]="actuarialSci">Actuarial Science</button>
+    <button mat-menu-item [matMenuTriggerFor]="pureMath">Mathematics</button>
+    <button mat-menu-item>Game development</button>
+    <button mat-menu-item>Gaming</button>
+  </mat-menu>
+  
+  <mat-menu #otherCervices="matMenu">
+    <button mat-menu-item routerLink="/projects">UI/UX development</button>
+    <button mat-menu-item routerLink="/projects">Mobile App development</button>
+    <button mat-menu-item routerLink="/math-tutor">Math Tutor for Highschool and college</button>
+    <button mat-menu-item routerLink="/assignment-help">Help with a project/Assignment</button>
+    <button mat-menu-item [matMenuTriggerFor]="progLang">Coding tutor</button>
+  </mat-menu>
+
+  <mat-menu #dataSci="matMenu">
+    <button mat-menu-item routerLink="/dataSci">Supervised & Unsupervised Learning</button>
+    <button mat-menu-item routerLink="/dataSci">Regression</button>
+    <button mat-menu-item routerLink="/dataSci">Data analysis</button>
+    <button mat-menu-item routerLink="/dataSci">Python,R and SQL</button>
+    <button mat-menu-item routerLink="/dataSci">Excel</button>
+  </mat-menu>
+  
+  <mat-menu #actuarialSci="matMenu">
+    <button mat-menu-item routerLink="/actuarial">Financial Mathematics</button>
+    <button mat-menu-item routerLink="/actuarial">Statistics</button>
+    <button mat-menu-item routerLink="/actuarial">Probability</button>
+    <button mat-menu-item routerLink="/actuarial">Actuarial Modelling</button>
+  </mat-menu>
+  
+  <mat-menu #pureMath="matMenu">
+    <button mat-menu-item routerLink="/pure-math">Calculus</button>
+    <button mat-menu-item routerLink="/pure-math">Linear algebra</button>
+    <button mat-menu-item routerLink="/pure-math">Financial Mathematics</button>
+    <button mat-menu-item routerLink="/pure-math">Pure Mathematics</button>
+    <button mat-menu-item disabled>Books for aspiring actuaries</button>
+  </mat-menu>
+  <mat-menu #progLang="matMenu">
+    <button mat-menu-item routerLink="/developer">Python</button>
+    <button mat-menu-item routerLink="/developer">JavaScript</button>
+    <button mat-menu-item routerLink="/developer">TypeScript</button>
+    <button mat-menu-item routerLink="/developer">Lua</button>
+    <button mat-menu-item routerLink="/developer">Flask</button>
+    <button mat-menu-item routerLink="/developer">NodeJs</button>
+    <button mat-menu-item routerLink="/developer">ExpressJs</button>
+    <button mat-menu-item routerLink="/developer">Angular</button>
+    <button mat-menu-item routerLink="/developer">HTML/CSS</button>
+  </mat-menu>
+  
+
+<router-outlet> </router-outlet>
+
+
+<!-- leave a review -->
