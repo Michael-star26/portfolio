@@ -24,8 +24,7 @@ import { DeveloperComponent } from './developer/developer.component';
 export const routes: Routes = [
     {path:'gaming',title:'Gaming',component:GamingComponent},
     {path:'actuarial',component:ActuarialComponent,title:'Actuarial'},
-    {path:'about',component:AboutComponent,title:'About'},
-    {path:'message-me',component:MessageMeComponent,title:'Message Me'},
+    {path:'about',component:AboutComponent,title:'About'},  
     {path:'projects',component:ProjectsComponent,title:'Projects'},
     {path:'contact',component:ContactComponent,title:'contact'},
     {path:'assignment-help',title:'Assignment',component:AssignmentHelpComponent},
@@ -37,7 +36,8 @@ export const routes: Routes = [
     {path:'testimonials',title:'Testimonials',component:TestimonialsComponent},
     {path:'blog',title:'Blog',component:BlogComponent},
     {path:'developer',title:'Developer',component:DeveloperComponent},
-    {path:'',component:HomeComponent,title:'Home'},
+    {path:'message-me',component:HomeComponent,title:'Home'},
+    {path:'',component:MessageMeComponent,title:'Message Me'},
     {path:'**',component:NotFoundComponent,title:'404 not found'},
     
     
