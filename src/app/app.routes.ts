@@ -25,7 +25,7 @@ export const routes: Routes = [
     {path:'gaming',title:'Gaming',component:GamingComponent},
     {path:'actuarial',component:ActuarialComponent,title:'Actuarial'},
     {path:'about',component:AboutComponent,title:'About'},
-    {path:'messageme',component:MessageMeComponent,title:'Message Me'},
+    {path:'message-me',component:MessageMeComponent,title:'Message Me'},
     {path:'projects',component:ProjectsComponent,title:'Projects'},
     {path:'contact',component:ContactComponent,title:'contact'},
     {path:'assignment-help',title:'Assignment',component:AssignmentHelpComponent},
