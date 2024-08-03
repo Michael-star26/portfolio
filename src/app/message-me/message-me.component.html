@@ -1,1 +1,71 @@
-<p>message-me works!</p>
+<div class="ui card m-auto d-flex">
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="userCred" completed>
+            <form [formGroup]="userCred">
+                <ng-template matStepLabel>Enter your name</ng-template>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Your Name" formControlName="userName" required>
+                </mat-form-field>
+                
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step [stepControl]="userCred">
+            <form [formGroup]="userCred">
+                <ng-template matStepLabel>Enter your email</ng-template>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Your email" formControlName="contact" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+        
+        <mat-step [stepControl]="userIssues">
+            <form [formGroup]="userIssues">
+                <ng-template matStepLabel>Describe your issue</ng-template>
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <input matInput placeholder="Describe" formControlName="content">                 
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        
+        
+        <mat-step >
+            <form>
+                <ng-template matStepLabel>Done</ng-template>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Complete</button>
+                </div>
+            </form>
+        </mat-step>
+
+        
+    </mat-stepper>
+
+</div>
+
+<div class="m-3">
+    <div class="ui mini card d-flex m-auto p-1">
+        <h6 class="display 6 m1-0" style="justify-content:center;color:black"><b>Elaborate your issue below</b></h6>
+        <div class="card">
+            <form [formGroup]="userIssues">
+                <p-editor formControlName="content" [style]="{ height: '320px' }" />
+            </form>
+        </div>
+    </div>
+</div>
