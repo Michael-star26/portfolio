@@ -36,8 +36,8 @@ export const routes: Routes = [
     {path:'testimonials',title:'Testimonials',component:TestimonialsComponent},
     {path:'blog',title:'Blog',component:BlogComponent},
     {path:'developer',title:'Developer',component:DeveloperComponent},
-    {path:'message-me',component:HomeComponent,title:'Home'},
-    {path:'',component:MessageMeComponent,title:'Message Me'},
+    {path:'messageme',component:MessageMeComponent,title:'Message Me'},
+    {path:'',component:HomeComponent,title:'Home'},  
     {path:'**',component:NotFoundComponent,title:'404 not found'},
     
     

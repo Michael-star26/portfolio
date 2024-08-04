@@ -69,3 +69,11 @@
         </div>
     </div>
 </div>
+<!-- 
+<div *ngFor="let person of people | keyvalue" class="ui card d-flex m-auto p-3">
+    <p>{{person.key}} <span style="color:green">{{person.value}}</span></p>
+</div> -->
+
+<div *ngFor="let msg of message | keyvalue" class="ui card d-flex m-auto p-3">
+    <p>{{msg.key}} <span style="color:green">{{msg.value}}</span></p>
+</div>
