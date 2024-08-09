@@ -12,5 +12,5 @@ import { FormsModule } from '@angular/forms';
 })
 export class TestimonialsComponent {
   favicon='favicon.jpg';
-  value:number=4.5;
+  value:number=4;
 }
