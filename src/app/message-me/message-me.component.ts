@@ -47,7 +47,8 @@ export class MessageMeComponent implements OnInit {
     "jina":"Angeline",
     "umri":20
   }
-  // getData?:any
+  createPost(){}
+  body:any
   constructor(private formBuilder:FormBuilder,private http:HttpClient,private apiService:ApiDataService){}
   ngOnInit(): void {
 
@@ -62,15 +63,25 @@ export class MessageMeComponent implements OnInit {
       
     })
 
-
-    this.apiService.getMessage().subscribe(
+    this.apiService.messages().subscribe(
       (data)=>{
         this.message=data
       },
       (error)=>{
         console.error('API error',error)
       }
-    )
+    ),
+
+    ()=>{
+      const body = { tcredentials: this.userCred, issue: this.userIssues };
+       this.http.post('http://localhost:3006/api/post', body)
+         .subscribe(response => {
+           console.log(response);
+      
+         },(error)=>{
+          console.error("POST error",error)
+         });
+     }
     
   }
   

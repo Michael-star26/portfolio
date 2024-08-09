@@ -1,0 +1,77 @@
+<div class="ui card d-flex m-auto p-5">
+    <div class="ui card p-2">
+        <form action="" method="post" class="ui form">
+            <div class="ui info field">
+                <label for="user">Enter your name</label>
+                <div class="ui left  icon input">
+                    <input type="text" [(ngModel)]="user" placeholder="User" name="user" id="user">
+                    <i class="user icon"></i>
+                </div>
+            </div>
+            <div class="">
+                <button type="submit" class="ui yellow button m-auto d-flex"><i class="user plus icon"></i>
+                    Add User
+                </button>   
+            </div>
+        </form>
+    </div>
+</div>
+<div class="ui card d-flex m-auto p-5">
+    <div class="ui card p-2">
+        <form action="" method="post" class="ui form">
+            <div class="ui info field">
+                <label for="user">Get Users</label>
+                <div *ngFor="let user of users | keyvalue">
+                    <p>{{user.key}} <span style="color:teal">{{user.value}}</span></p>
+                </div>
+                
+            </div>
+            <div class="">
+                <button type="submit" class="ui positive button m-auto d-flex"><i class="user plus icon"></i>
+                    Get User
+                </button>   
+            </div>
+        </form>
+    </div>
+</div>
+<div class="ui card d-flex m-auto p-5">
+    <div class="ui card p-2">
+        <form action="" method="post" class="ui form">
+            <div class="ui info field">
+                <label for="user">Delete Users</label>
+                <div class="ui left  icon input">
+                    <input type="text" [(ngModel)]="user" placeholder="Delete this user" name="user" id="user">
+                    <i class="user icon"></i>
+                </div>
+            </div>
+            <div class="">
+                <button type="submit" class="ui negative button m-auto d-flex"><i class="user plus icon"></i>
+                    Delete User
+                </button>   
+            </div>
+        </form>
+    </div>
+</div>
+<div class="ui card d-flex m-auto p-5">
+    <div class="ui card p-2">
+        <form action="" method="post" class="ui form">
+            <div class="ui info field">
+                <label for="user">Get Users</label>
+                <div *ngIf results>
+                    <p><span style="color:teal">{{results}}</span></p>
+                </div>              
+            </div>
+            <div class="">
+                <button type="submit" class="ui positive button m-auto d-flex"><i class="user plus icon"></i>
+                    Get User
+                </button>   
+            </div>
+        </form>
+    </div>
+</div>
+
+<li *ngFor="let item of news">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.abstract }}</p>
+    <a [href]="item.url" target="_blank">Read more</a>
+  </li>

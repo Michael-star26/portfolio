@@ -15,7 +15,7 @@
         </mat-step>
 
         <mat-step [stepControl]="userCred">
-            <form [formGroup]="userCred">
+            <form [formGroup]="userCred" method="post">
                 <ng-template matStepLabel>Enter your email</ng-template>
                 <mat-form-field>
                     <mat-label>Email</mat-label>
@@ -30,7 +30,7 @@
 
         
         <mat-step [stepControl]="userIssues">
-            <form [formGroup]="userIssues">
+            <form [formGroup]="userIssues" method="post">
                 <ng-template matStepLabel>Describe your issue</ng-template>
                 <mat-form-field>
                     <mat-label>Description</mat-label>
@@ -49,7 +49,7 @@
                 <ng-template matStepLabel>Done</ng-template>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Complete</button>
+                    <button mat-button matStepperNext type="submit">Complete</button>
                 </div>
             </form>
         </mat-step>

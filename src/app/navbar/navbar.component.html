@@ -1,7 +1,7 @@
-<mat-drawer-container class="my-container p-1">
-    <mat-drawer #drawer class="my-drawer" mode="over" position="start">
-      <div class="ui secondary vertical pointing menu" style="padding-top: 5%;">
-        <a class="item" [routerLinkActive]="newStatus">
+<mat-drawer-container class="my-container p-1" style="background-color: aliceblue;">
+    <mat-drawer #drawer class="my-drawer" mode="over" position="start" style="background-color: aliceblue;width: fit-content;" >
+      <div class="ui secondary vertical pointing menu" style="padding-top: 5%;background-color: aliceblue;">
+        <a class="item" [routerLinkActive]="newStatus" >
           <button mat-menu-item routerLink="/" (click)="drawer.toggle();second()">
             <mat-icon>menu</mat-icon>
             <span>Home</span>
@@ -17,6 +17,12 @@
           <button mat-menu-item routerLink="/testimonials" routerLinkActive="active" (click)="drawer.toggle()">
             <mat-icon>insert_emoticon</mat-icon>
             <span>Happy Clients</span>
+          </button>
+        </a>
+        <a class="item" [routerLinkActive]="newStatus">
+          <button mat-menu-item routerLink="/apitest" routerLinkActive="active" (click)="drawer.toggle()">
+            <mat-icon>insert_emoticon</mat-icon>
+            <span>Test API</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
@@ -57,27 +63,39 @@
         </a>
       </div>
     </mat-drawer>
-    <mat-drawer-content>
-      <div class="my-drawer-content">
-        <button  mat-button (click)="drawer.toggle()">
+    <mat-drawer-content style="position:relative;">
+      <section style="background-color: aliceblue">
+          <button  mat-button (click)="drawer.toggle()">
             <i class="material-icons">toc</i>
         </button>
+       
+      </section>
+      <img src="dataSci.jpeg" alt="" width="100%">
+      <div class="my-drawer-content" style="justify-content: center;position:absolute;top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);">
+        
 
-          <div class="p-5">
-            <div class="ui card m-auto ">
-              <p style="justify-content: center;">
-                Explore a world where your fantasies and concepts are brought into existence. 
-              </p>
+          <div class="p-8 m-2" style="position: sticky;">
+            <div class="ui card m-auto p-2" style="border-radius: 15px 30px 15px 30px;background-color: transparent;border-color: rgb(36,33,33);font-size: xx-large;width: fit-content;">
+              <h4 style="color: transparent;
+              background-clip: text;
+              background-image: linear-gradient(to right, #03c5f5, #f4fc84, #db2777);font-size: 50px;">
+                WELCOME  TO  <span style="font-size:50px;"><b>VERTEX</b></span>
+              </h4>
+              <!-- <p style="color: transparent;
+              background-clip: text;
+              background-image: linear-gradient(to right, #28ff21, #0de9f1, #db2777);">The solution to all your software problems</p> -->
             </div>
           </div>
           <div class="m-2"></div>
-          <div class="ui card d-flex m-auto" style="padding: 50px;justify-content: center">
+          <!-- <div class="ui card d-flex m-auto" style="padding: 50px;justify-content: center;">
             
             <p style="justify-content: center;">
               At Vertex, we blend various technologies to bring you exceptional software solutions. <br>
               We are committed to creating solutions that lead to success as your loyal partner. 
             </p>
-          </div>
+          </div> -->
       </div>
       <div class="p-2">       
       </div>

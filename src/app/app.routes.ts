@@ -19,6 +19,7 @@ import { GamingComponent } from './gaming/gaming.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { BlogComponent } from './blog/blog.component';
 import { DeveloperComponent } from './developer/developer.component';
+import { ApitestingComponent } from './apitesting/apitesting.component';
 
 
 export const routes: Routes = [
@@ -37,8 +38,10 @@ export const routes: Routes = [
     {path:'blog',title:'Blog',component:BlogComponent},
     {path:'developer',title:'Developer',component:DeveloperComponent},
     {path:'messageme',component:MessageMeComponent,title:'Message Me'},
+    {path:'apitest',title:'Api',component:ApitestingComponent},
     {path:'',component:HomeComponent,title:'Home'},  
     {path:'**',component:NotFoundComponent,title:'404 not found'},
+    
     
     
     
