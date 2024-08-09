@@ -1,72 +1,72 @@
-<mat-drawer-container class="my-container p-1" style="background-color: aliceblue;">
-    <mat-drawer #drawer class="my-drawer" mode="over" position="start" style="background-color: aliceblue;width: fit-content;" >
-      <div class="ui secondary vertical pointing menu" style="padding-top: 5%;background-color: aliceblue;">
+<mat-drawer-container class="my-container p-1" style="background-color: black;color: black;">
+    <mat-drawer #drawer class="my-drawer" mode="over" position="start" style="background-color: black;width: fit-content;color: aliceblue;" >
+      <div class="ui secondary vertical pointing menu" style="padding-top: 5%;background-color: rgb(5, 1, 1);">
         <a class="item" [routerLinkActive]="newStatus" >
           <button mat-menu-item routerLink="/" (click)="drawer.toggle();second()">
-            <mat-icon>menu</mat-icon>
-            <span>Home</span>
+            <mat-icon style="color: #db2777;">menu</mat-icon>
+            <span style="color: #db2777;">Home</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/projects" (click)="drawer.toggle();second()">
-            <mat-icon>desktop_mac</mat-icon>
-            <span>Projects</span>
+            <mat-icon style="color: #db2777;">desktop_mac</mat-icon>
+            <span style="color: #db2777;">Projects</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/testimonials" routerLinkActive="active" (click)="drawer.toggle()">
-            <mat-icon>insert_emoticon</mat-icon>
-            <span>Happy Clients</span>
+            <mat-icon style="color: #db2777;">insert_emoticon</mat-icon>
+            <span style="color: #db2777;">Happy Clients</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/apitest" routerLinkActive="active" (click)="drawer.toggle()">
-            <mat-icon>insert_emoticon</mat-icon>
-            <span>Test API</span>
+            <mat-icon style="color: #db2777;">insert_emoticon</mat-icon>
+            <span style="color: #db2777;">Test API</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/messageme" (click)="drawer.toggle();second()">
-            <mat-icon>ring_volume</mat-icon>
-            <span>Contact</span>
+            <mat-icon style="color: #db2777;">ring_volume</mat-icon>
+            <span style="color: #db2777;">Contact</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/about" (click)="drawer.toggle();second()">
-            <mat-icon>code</mat-icon>
-            <span>My Tech Stack</span>
+            <mat-icon style="color: #db2777;">code</mat-icon>
+            <span style="color: #db2777;">My Tech Stack</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/blog" (click)="drawer.toggle();second()">
-            <mat-icon>language</mat-icon>
-            <span>My blog</span>
+            <mat-icon style="color: #db2777;">language</mat-icon>
+            <span style="color: #db2777;">My blog</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/actuarial" (click)="drawer.toggle();second()">
-            <mat-icon>functions</mat-icon>
-            <span>Life as an Actuary</span>
+            <mat-icon style="color: #db2777;">functions</mat-icon>
+            <span style="color: #db2777;">Life as an Actuary</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/math-tutor" (click)="drawer.toggle();second()">
-            <mat-icon>self_improvement</mat-icon>
-            <span>There's more than coding</span>
+            <mat-icon style="color: #db2777;">self_improvement</mat-icon>
+            <span style="color: #db2777;">There's more than coding</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/about" (click)="drawer.toggle();second()">
-            <mat-icon>person_pin</mat-icon>
-            <span>About</span>
+            <mat-icon style="color: #db2777;">person_pin</mat-icon>
+            <span style="color: #db2777;">About</span>
           </button>
         </a>
       </div>
     </mat-drawer>
     <mat-drawer-content style="position:relative;">
-      <section style="background-color: aliceblue">
+      <section style="background-color: black">
           <button  mat-button (click)="drawer.toggle()">
-            <i class="material-icons">toc</i>
+            <i class="material-icons" style="color: #db2777;">toc</i>
         </button>
        
       </section>
