@@ -1,10 +1,10 @@
 <mat-drawer-container class="my-container p-1" style="background-color: black;color: black;">
-    <mat-drawer #drawer class="my-drawer" mode="over" position="start" style="background-color: black;width: fit-content;color: aliceblue;" >
+    <mat-drawer #drawer class="my-drawer" mode="over" position="start" style="background-color: black;width: fit-content;color:green" >
       <div class="ui secondary vertical pointing menu" style="padding-top: 5%;background-color: rgb(5, 1, 1);">
-        <a class="item" [routerLinkActive]="newStatus" >
+        <a class="item" [routerLinkActive]="newStatus" style="background-color:transparent;">
           <button mat-menu-item routerLink="/" (click)="drawer.toggle();second()">
-            <mat-icon style="color: #db2777;">menu</mat-icon>
-            <span style="color: #db2777;">Home</span>
+            <mat-icon style="color: #db2777;background-color:transparent;">menu</mat-icon>
+            <span style="color: #db2777;background-color:transparent;">Home</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
@@ -96,13 +96,7 @@
             </div>
           </div>
           <div class="m-2"></div>
-          <!-- <div class="ui card d-flex m-auto" style="padding: 50px;justify-content: center;">
-            
-            <p style="justify-content: center;">
-              At Vertex, we blend various technologies to bring you exceptional software solutions. <br>
-              We are committed to creating solutions that lead to success as your loyal partner. 
-            </p>
-          </div> -->
+          
 
           
       </div>
@@ -112,7 +106,7 @@
   </mat-drawer-container>
   
   
-  <button mat-button [matMenuTriggerFor]="otherOptions">Find out more <span style="color: teal;">Here</span></button>
+ <button mat-button [matMenuTriggerFor]="otherOptions">Find out more <span style="color: teal;">Here</span></button>
   <mat-menu #otherOptions="matMenu">
 
     <button mat-menu-item [matMenuTriggerFor]="otherCervices">Other Services</button>
@@ -168,7 +162,7 @@
     <button mat-menu-item routerLink="/developer">ExpressJs</button>
     <button mat-menu-item routerLink="/developer">Angular</button>
     <button mat-menu-item routerLink="/developer">HTML/CSS</button>
-  </mat-menu>
+  </mat-menu> 
   
 
 <router-outlet> </router-outlet>
