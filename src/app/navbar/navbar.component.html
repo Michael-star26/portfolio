@@ -90,9 +90,7 @@
               background-color: #db2777;font-size: 50px;">
                 WELCOME  TO  <span style="font-size:50px;"><b>VERTEX</b></span>
               </h4>
-              <!-- <p style="color: transparent;
-              background-clip: text;
-              background-image: linear-gradient(to right, #28ff21, #0de9f1, #db2777);">The solution to all your software problems</p> -->
+              
             </div>
           </div>
           <div class="m-2"></div>
@@ -105,8 +103,8 @@
     </mat-drawer-content>
   </mat-drawer-container>
   
-  
- <button mat-button [matMenuTriggerFor]="otherOptions">Find out more <span style="color: teal;">Here</span></button>
+  <router-outlet> </router-outlet>
+ <button mat-button [matMenuTriggerFor]="otherOptions" hidden>Find out more <span style="color: teal;">Here</span></button>
   <mat-menu #otherOptions="matMenu">
 
     <button mat-menu-item [matMenuTriggerFor]="otherCervices">Other Services</button>
@@ -165,7 +163,7 @@
   </mat-menu> 
   
 
-<router-outlet> </router-outlet>
+
 
 
 <!-- leave a review -->
