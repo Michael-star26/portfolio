@@ -39,6 +39,7 @@ export const routes: Routes = [
     {path:'developer',title:'Developer',component:DeveloperComponent},
     {path:'messageme',component:MessageMeComponent,title:'Message Me'},
     {path:'apitest',title:'Api',component:ApitestingComponent},
+    {path:'message',redirectTo:'/messageme',pathMatch:'full'},
     {path:'',component:HomeComponent,title:'Home'},  
     {path:'**',component:NotFoundComponent,title:'404 not found'},
     
