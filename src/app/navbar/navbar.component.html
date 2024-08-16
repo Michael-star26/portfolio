@@ -19,16 +19,19 @@
             <span style="color: #db2777;">Happy Clients</span>
           </button>
         </a>
+        
         <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/apitest" routerLinkActive="active" (click)="drawer.toggle()">
-            <mat-icon style="color: #db2777;">insert_emoticon</mat-icon>
-            <span style="color: #db2777;">Test API</span>
+          <button mat-menu-item  (click)="drawer.toggle();second()">
+            <mat-icon style="color: #db2777;">ring_volume</mat-icon>
+            <span>
+              <a href="#contact" style="color: #db2777;text-decoration:none;">Contact</a>
+            </span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
           <button mat-menu-item routerLink="/messageme" (click)="drawer.toggle();second()">
-            <mat-icon style="color: #db2777;">ring_volume</mat-icon>
-            <span style="color: #db2777;">Contact</span>
+            <mat-icon style="color: #db2777;">chat</mat-icon>
+            <span style="color: #db2777;">Message</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
