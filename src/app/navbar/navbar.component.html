@@ -7,14 +7,15 @@
             <span style="color: #db2777;background-color:transparent;">Home</span>
           </button>
         </a>
-        <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/projects" (click)="drawer.toggle();second()">
+        <!-- removed routerlink -->
+        <a class="item" [routerLinkActive]="newStatus" href="#projects">
+          <button mat-menu-item  (click)="drawer.toggle();second()">
             <mat-icon style="color: #db2777;">desktop_mac</mat-icon>
             <span style="color: #db2777;">Projects</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/testimonials" routerLinkActive="active" (click)="drawer.toggle()">
+          <button mat-menu-item routerLink="/testimonials" routerLinkActive="active" (click)="drawer.toggle()" title="coming soon" disabled>
             <mat-icon style="color: #db2777;">insert_emoticon</mat-icon>
             <span style="color: #db2777;">Happy Clients</span>
           </button>
@@ -34,32 +35,35 @@
             <span style="color: #db2777;">Message</span>
           </button>
         </a>
-        <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/about" (click)="drawer.toggle();second()">
+        <!-- removed routerlink -->
+        <a class="item" [routerLinkActive]="newStatus" href="#stack">
+          <button mat-menu-item  (click)="drawer.toggle();second()">
             <mat-icon style="color: #db2777;">code</mat-icon>
             <span style="color: #db2777;">My Tech Stack</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/blog" (click)="drawer.toggle();second()">
+          <button mat-menu-item routerLink="/blog" (click)="drawer.toggle();second()" title="coming soon" disabled>
             <mat-icon style="color: #db2777;">language</mat-icon>
             <span style="color: #db2777;">My blog</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/actuarial" (click)="drawer.toggle();second()">
+          <button mat-menu-item routerLink="/actuarial" title="coming soon" disabled (click)="drawer.toggle();second()">
             <mat-icon style="color: #db2777;">functions</mat-icon>
             <span style="color: #db2777;">Life as an Actuary</span>
           </button>
         </a>
         <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/math-tutor" (click)="drawer.toggle();second()">
+          <button mat-menu-item routerLink="/math-tutor" title="coming soon" disabled (click)="drawer.toggle();second()">
             <mat-icon style="color: #db2777;">self_improvement</mat-icon>
             <span style="color: #db2777;">There's more than coding</span>
           </button>
         </a>
-        <a class="item" [routerLinkActive]="newStatus">
-          <button mat-menu-item routerLink="/about" (click)="drawer.toggle();second()">
+
+        <!-- removed router link -->
+        <a class="item" [routerLinkActive]="newStatus" href="#about">
+          <button mat-menu-item  (click)="drawer.toggle();second()">
             <mat-icon style="color: #db2777;">person_pin</mat-icon>
             <span style="color: #db2777;">About</span>
           </button>
